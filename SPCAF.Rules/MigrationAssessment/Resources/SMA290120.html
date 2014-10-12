@@ -1,0 +1,76 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>HttpModule</b>
+            <p>
+                A HttpModule is a Full Trust interface which intercepts requests to the server and allows for processing before anything else.
+                Typical usages are custom authentication, and redirects.
+            </p>
+        </td>
+        <td>
+            <b>SharePoint Claims Authentication</b>
+            <p>
+                Claims Authentication, allows you to use a custom authentication provider in order to provide custom security.
+                While HttpModules have been used for this in the past, only Claims Authentication should be used.
+            </p>
+            <b>Redirects, and other uses of HttpModules</b>
+            <p>
+                Some usages in the past of a HttpModule are no longer valid.
+                However some usages like redirections, do have work arounds still available with the newer model, using client side scripting.
+                With the usages too varied, each particular case needs to be identified and remapped into the newer Client Side Object Model.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Not available going forwards</b>
+            <p>
+                HttpModules are not available except in Full Trust applications.
+            </p>
+        </td>
+        <td>
+            <b>Case by Case</b>
+            <p>
+                There being so many usages of a HttpModule (the most common being authentication and redirects), we can provide better alternatives with other Out of the Box functionality.
+                While Claims Authentication was not available early on, it is now fully integrated into SharePoint meaning the process of configuring it is straight forward.
+                In these cases Client Side Scripting is a better option for handling Redirects, keeping usability in mind.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Low  ~ High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Not migratable</li>
+    <li>Most use cases have Out of the Box alternatives</li>
+</ul>
+
+

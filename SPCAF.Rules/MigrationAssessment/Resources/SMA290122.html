@@ -1,0 +1,106 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Managed Code to access cached values against a site</b>
+            <p>
+                The property bag is attached to each <i>Web Object</i> in the farm (A Web object is the collection of data that describes a Site in a SharePoint Farm).
+                It has default values used by that specific Web, and also the Property Bag is expandable with custom values through code based solutions.
+                The Property Bag is a <i>Hashtable</i> which is a large list of data that can be of any sort, that is referenced by a <i>Key</i>. This works as an index to be able to quickly access data values.
+                The Property Bag can therefore be used to store any data that is valuable to the Site.
+            </p>
+        </td>
+        <td>
+            <b>Accessing the Property Bag Remotely</b>
+            <p>
+                The Property Bag is accessed through the {Web object}.AllProperties when being used remotely. Apart from the addition of requesting this property, it works identically to its Full Trust counterpart.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Full Trust Code Sample</strong></th>
+        <th><strong>Client Side Object Model Code Sample</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Code Sample</b>
+            <code>// Allow unsafe updates is required to show that this was intended and not a security breach<br />
+                web.AllowUnsafeUpdates = true;<br />
+                <br />  
+                // Get Property bag <br />  
+                string spcaf; <br />    
+                if (web.AllProperties.ContainsKey("SPCAF")) <br />  
+                { <br />  
+                &nbsp;&nbsp;spcaf = web.AllProperties["SPCAF"].ToString(); <br />  
+                } <br />  
+                else <br />  
+                { <br />  
+                &nbsp;&nbsp;spcaf = "SharePoint Code Analysis Framework"; <br />  
+                <br />  
+                &nbsp;&nbsp;// Update Property Bag value SPCAF <br />  
+                &nbsp;&nbsp;web.Properties["SPCAF"] = spcaf; <br />  
+                &nbsp;&nbsp;web.Properties.Update(); <br />  
+                } <br />  
+                // End of the unsafe update <br />  
+                web.AllowUnsafeUpdates = false; 
+            </code>
+        </td>
+        <td>
+            <b>Code Sample</b>
+            <code>Web web = clientContext.Site.RootWeb; <br />  
+// Get remote web object with the Property Bag <br />  
+clientContext.Load(web, w => w.AllProperties);<br />  
+clientContext.ExecuteQuery();<br />  
+ <br />  
+// Get Property bag <br />  
+string spcaf; <br />  
+if (web.AllProperties.FieldValues.ContainsKey("SPCAF")) <br />  
+{ <br />  
+                &nbsp;&nbsp;spcaf = web.AllProperties["SPCAF"].ToString(); <br />  
+} <br />  
+else <br />  
+{ <br />  
+                &nbsp;&nbsp;spcaf = "SharePoint Code Analysis Framework"; <br />  
+                <br />  
+                &nbsp;&nbsp;// Update Property Bag value SPCAF <br />  
+                &nbsp;&nbsp;web.Properties["SPCAF"] = spcaf; <br />  
+                <br />  
+                &nbsp;&nbsp;// In CSOM we update the web object,  <br />  
+                &nbsp;&nbsp;// not the property bag like we did in SSOM <br />  
+                &nbsp;&nbsp;web.Update(); <br />  
+                &nbsp;&nbsp;clientContext.ExecuteQuery(); <br />  
+}
+            </code>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Medium</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Low ~ Medium</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>Medium</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Fully migratable to App model</li>
+</ul>
+
+

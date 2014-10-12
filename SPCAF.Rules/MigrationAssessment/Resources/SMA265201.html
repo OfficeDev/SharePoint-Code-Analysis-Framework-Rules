@@ -1,0 +1,108 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Content Types</b>
+            <p>
+                A content type, is a shared definition of a list. It describes Fields and Views, which can be reused where they are deployed.
+            </p>
+        </td>
+        <td>
+            <b>Paradigm Shift - Deployment through Code</b>
+            <p>
+                An alternate method is the creation of Content Types through code.
+                This method takes the structure of a List, and creates the Content Type programmatically.
+                While also popular in Full-Trust solutions, it is the preferred method through the App Model, doing the same provisioning process remotely.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Dependency on Deployed Files</b>
+            <p>
+                When you create a an element in SharePoint from a Declarative file, the content you have created is then dependent on the xml files they are described in.
+                When these need to be retracted, due to an update, a change in the system, or part of a disaster recovery plan, this link is broken.
+                This will ultimately cause issues in the long run.
+            </p>
+        </td>
+        <td>
+            <b>Cloud Application Model</b>
+            <p>
+                The Cloud Application Model or CAM, is designed to create content through code, therefore not creating any dependency links.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+<code>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <Elements xmlns="http://schemas.microsoft.com/sharepoint/"> <br />
+&nbsp;&nbsp;<ContentType ID="0x0101009189AB5D3D2647B580F011DA2F356FB2" <br />
+&nbsp;&nbsp;&nbsp;&nbsp;Name="Contoso Document" <br />
+&nbsp;&nbsp;&nbsp;&nbsp;Group="Contoso Content Types" <br />
+&nbsp;&nbsp;&nbsp;&nbsp;Version="0"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<FieldRefs> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;... <br />
+&nbsp;&nbsp;&nbsp;&nbsp;</FieldRefs> <br />
+&nbsp;&nbsp;</ContentType> <br />
+</Elements>
+</code>
+        </td>
+        <td>
+ <code>
+    ContentTypeCollection contentTypes = web.ContentTypes; <br />
+    cc.Load(contentTypes); <br />
+    cc.ExecuteQuery(); <br />
+    <br />
+    foreach (var item in contentTypes)<br />
+    { <br />
+    &nbsp;&nbsp;if (item.StringId == "0x0101009189AB5D3D2647B580F011DA2F356FB2") <br />
+    &nbsp;&nbsp;return; <br />
+    } <br />
+    <br />
+    // Create a Content Type Information object <br />
+    ContentTypeCreationInformation newCt = new ContentTypeCreationInformation(); <br />
+    newCt.Name = "Contoso Document"; <br />
+    newCt.Id = "0x0101009189AB5D3D2647B580F011DA2F356FB2"; <br />
+    newCt.Group = "Contoso Content Types"; <br />
+    ContentType myContentType = contentTypes.Add(newCt); <br />
+    cc.ExecuteQuery();
+</code>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Medium</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>Critical</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>No hard links between the provisioning procedure, and the content</li>
+    <li>Easily Migratable, and Future Proofed</li>
+</ul>
+
+

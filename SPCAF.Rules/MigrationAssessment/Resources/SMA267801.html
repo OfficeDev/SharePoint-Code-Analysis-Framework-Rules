@@ -1,0 +1,83 @@
+﻿<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td><b>Use of XML to Provision the Artifacts</b>
+            <p>
+                The custom site definitions describe the provisioning process of a site in XML and SharePoint provision the artifacts.
+            </p>
+            <p>
+                A site definition is deployed via Full Trust Solutions (WSP) to a SharePoint farm and typically contain 2 XML files which are deployed to the SharePoint file system.
+            </p>
+        </td>
+        <td>
+            <b>Remote Provisioning</b>
+            <p>
+                The provisioning is managed outside of SharePoint. All artifacts are deployed via CSOM to SharePoint.
+            </p>
+            <p>
+                A custom provisioning engine (e.g. with Powershell, external webservices or client applications) manages the creation of sites and applies changes via CSOM.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of  App Approach</strong></th>
+    </tr>
+    <tr>
+        <td><b>Migration Difficulty</b>
+            <p>
+                This is a critical blocker for migrations because SharePoint content (such as team sites) is based on a custom site definition and cannot be migrated easily.
+            </p>
+            <p>
+                In a migration from SP 2010 to SP 2013 (if the target 2013 environment allows custom site definitions) the 2010 site definitions often cannot be used without changes because they keep using 2010 features and may look like 2010 sites in a 2013 environment (with the limited feature set). Additionally some SP 2010 features are no available in SP 2013.
+            </p>
+            <p>
+                In SharePoint Online and in Office365 site definitions are not available.
+            </p>
+        </td>
+        <td>
+            <b>Easier Migration</b>
+            <p>
+                If this custom provisioning process is established and site definitions are completely avoided all content and sites can be easily migrated to other SharePoint environments.
+            </p>
+
+            <b>Less Downtime for Deployments</b>
+            <p>
+                New templates can be deployed without downtime for SharePoint because no WSP deployment to SharePoint is necessary. Only the site provisioning component needs to be updated.
+            </p>
+
+            <b>Easier Backup/Restore</b>
+            <p>The backup/restore of a site is independent from deployed WSP solutions which reduces the complexity of a backup/restore process.</p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <li>Easier Migration</li>
+    <li>Faster Disaster Recovery</li>
+    <li>Simpler Disaster Recovery</li>
+</ul>
+
+

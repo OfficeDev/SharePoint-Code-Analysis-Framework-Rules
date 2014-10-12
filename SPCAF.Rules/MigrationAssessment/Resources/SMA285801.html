@@ -1,0 +1,74 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Custom Action</b>
+            <p>
+                Custom actions are a flexible way of adding, or taking away, functionality from declarative elements of the page.
+                Typical usages of a custom action are to hide Ribbon buttons, include JavaScript into an existing master page, remove access to elements for non Administrators or to link new functionality to the UI.
+            </p>
+            <b>Custom Action Group</b>
+            <p>
+                A Custom Action Group is a Full Trust only solution to allow you to group Custom Actions together under a single ID.
+            </p>
+        </td>
+        <td>
+            <b>Custom Actions With Limited Schema</b>
+            <p>
+                The Schema for the App Model is limited, allowing only new UI links.
+                This is limited on purpose for security reasons.
+                For these security reasons, you are unable to ScriptLink, Hide Elements, Create Command UI Handlers, or create Custom Action Groups with this schema.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Dependency on Deployed Files</b>
+            <p>
+                When you create a an element in SharePoint from a Declarative file, the content you have created is then dependent on the XML files they are described in.
+                When these need to be retracted, due to an update, a change in the system, or part of a disaster recovery plan, this link is broken.
+                This will ultimately cause issues in the long run.
+            </p>
+        </td>
+        <td>
+            <b>Cloud Application Model</b>
+            <p>
+                Only new UI links can be used in the <i>AppHostWebFeatures CustomActionDefinition</i>.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Simplify future migration paths, by breaking dependencies on deployed files</li>
+</ul>
+
+

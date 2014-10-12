@@ -1,0 +1,81 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Executing functionality on an ad-hoc basis</b>
+            <p>
+                Features allow functionality to be encapsulated and only be used when requested.
+                Features can be activated and deactivated as required, and are used to provision new components to a SharePoint Site.
+                Common uses are:
+                <ul>
+                    <li>Sub Site Creation</li>
+                    <li>Creation of Lists/Libraries</li>
+                    <li>Creation of content types</li>
+                    <li>Other sub artifacts of the above</li>
+                </ul>
+            </p>
+        </td>
+        <td>
+            <b>Paradigm Shift - Deployment through Code</b>
+            <p>
+                An alternate method is the creation of content through code.
+                This method takes the structure of a site and creates the Fields, Content Type, Lists, etc. programmatically in place of the features.
+                While also popular in Full-Trust solutions, it is the preferred method through the App Model, doing the same provisioning process remotely.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Feature Dependency</b>
+            <p>
+                Once activated, a feature or the solution that holds the feature cannot be easily removed once components are in place.
+            </p>
+            <b>Difficult upgradeability, with possible downtime</b>
+            <p>
+                This activation creates a dependency on the WSP installed as above. This means that if there has to be an update, it is possible that the entire site may have to be offline during this process in order to avoid corruption or error.
+            </p>
+        </td>
+        <td>
+            <b>Feature Independence</b>
+            <p>
+                Apps allow complete seperation, allowing a smaller percentage of downtime of a site. Instead of taking a whole site offline during an update, only the components being updated need be taken offline.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Medium/High</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Low ~ High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Simpler upgrade paths</li>
+    <li>Reduced downtime</li>
+    <li>Seperation of feature dependency</li>
+</ul>
+
+

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{681A5421-CD0A-43B5-B806-190289C3262A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPCAF.Rules.MigrationAssessment</RootNamespace>
+    <AssemblyName>SPCAF.Rules.MigrationAssessment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil">
+      <HintPath>C:\Program Files (x86)\SPCAF\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="SPCAF.Sdk">
+      <HintPath>C:\Program Files (x86)\SPCAF\SPCAF.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMA25_Customization\64_Webpart\SMA256401_WebPartUserProfileManager.cs" />
+    <Compile Include="SMA25_Customization\64_Webpart\SMA256402_WebPartWithSearch.cs" />
+    <Compile Include="SMA25_Customization\64_Webpart\SMA256403_WebPartWithXsltTransform.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\21_Feature\SMA262101_Feature.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\56_ContentTypeBinding\SMA265601_ContentTypeBinding.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\55_ListDefinition\SMA265501_ListDefinition.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\54_ListInstance\SMA265401_ListInstance.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\51_Field\SMA265101_Field.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\52_ContentType\SMA265201_ContentType.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\70_FeatureStapling\SMA267001_FeatureStapling.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\71_WebTemplate\SMA267701_WebTemplate.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\78_SiteDefinition\SMA267801_SiteDefinition.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\04_TemplateFile\SMA260401_LayoutFiles.cs" />
+    <Compile Include="SMA28_ProcessIntegration\50_Receiver\SMA286003_WebEventReceiver.cs" />
+    <Compile Include="SMA28_ProcessIntegration\50_Receiver\SMA286002_ListEventReceiver.cs" />
+    <Compile Include="SMA28_ProcessIntegration\50_Receiver\SMA286001_ItemEventReceiver.cs" />
+    <Compile Include="SMA28_ProcessIntegration\58_CustomActionGroup\SMA285801_CustomActionGroup.cs" />
+    <Compile Include="SMA28_ProcessIntegration\59_HideCustomAction\SMA285901_HideCustomAction.cs" />
+    <Compile Include="SMA28_ProcessIntegration\57_CustomAction\SMA285701_CustomAction.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\01_Assembly\SMA290122_PropertyBag.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\04_TemplateFile\SMA292202_FieldTypes.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\01_Assembly\SMA290121_HttpHandler.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\01_Assembly\SMA290120_HttpModule.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\01_Assembly\SMA290110_TimerJobs.cs" />
+    <Compile Include="Categories.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SMA26_DeploymentAndProvisioning\01_Assembly\" />
+    <Folder Include="SMA27_UIAndBranding\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SMABranding.html" />
+    <EmbeddedResource Include="Resources\SMA267701.html" />
+    <EmbeddedResource Include="Resources\SMA285801.html" />
+    <EmbeddedResource Include="Resources\SMA285901.html" />
+    <EmbeddedResource Include="Resources\SMA256401.html" />
+    <EmbeddedResource Include="Resources\SMA256403.html" />
+    <EmbeddedResource Include="Resources\SMA256402.html" />
+    <Content Include="Resources\blankResolutionResourceTemplate.html" />
+    <EmbeddedResource Include="Resources\SMA262101.html" />
+    <EmbeddedResource Include="Resources\SMA290122.html" />
+    <None Include="Resources\Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SMA260401.html" />
+    <EmbeddedResource Include="Resources\SMA265101.html" />
+    <EmbeddedResource Include="Resources\SMA265201.html" />
+    <EmbeddedResource Include="Resources\SMA265401.html" />
+    <EmbeddedResource Include="Resources\SMA265501.html" />
+    <EmbeddedResource Include="Resources\SMA267001.html" />
+    <EmbeddedResource Include="Resources\SMA267801.html" />
+    <EmbeddedResource Include="Resources\SMA285701.html" />
+    <EmbeddedResource Include="Resources\SMA286001.html" />
+    <EmbeddedResource Include="Resources\SMA286002.html" />
+    <EmbeddedResource Include="Resources\SMA286003.html" />
+    <EmbeddedResource Include="Resources\SMA290110.html" />
+    <EmbeddedResource Include="Resources\SMA290120.html" />
+    <EmbeddedResource Include="Resources\SMA290121.html" />
+    <EmbeddedResource Include="Resources\SMA292202.html" />
+    <EmbeddedResource Include="Resources\SMA265601.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

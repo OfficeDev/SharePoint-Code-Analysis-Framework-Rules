@@ -1,0 +1,84 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Enforcing Functionality during Creation of New Sites/SubSites</b>
+            <p>
+                Feature Stapling allows you to declaratively link Features with the creation of new Sites/Subsites which use a certain template on creation.
+                This allows you to easily add extra functionality even to Out of the Box Site Templates, as well as custom Site Templates
+            </p>
+        </td>
+        <td>
+            <b>App Stapling</b>
+            <p>
+                The product catalog can be configured to always include an app with a new site created from a template.
+                While we won't have feature stapling directly in the App Model, App stapling allows you to simulate this process and provide almost identical features, which ties in with
+                Remote Provisioning models of the SharePoint 2013 App Model.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Not migratable to App Model</b>
+            <p>
+                A rethink of the design and structure of the Feature Stapling will have to take place.
+                There is no direct mapping to a feature stapling in the App Model. While work arounds are possible.
+            </p>
+            <b>Cannot garentuee order of stapling</b>
+            <p>
+                This is a common issue with Feature stapling in SharePoint, sometimes very complex work arounds are required, in order to acheive what should be an easy change to the site.
+                This results in unpredictability and poor governance.
+            </p>
+            <b>Hides the processing from the end user</b>
+            <p>
+                When using this technique traditionally, you will get the normal please wait feedback, with no information.
+                This can be troublesome with Feature Stapling, due to it often increasing the provisioning time of a site creation.
+            </p>
+        </td>
+        <td>
+            <b>Better usability, and user feedback</b>
+            <p>
+                The App Model helps push things to the presentation layer. This in turn allows you to keep the users aprised of why any processing may be taking longer than expected.
+            </p>
+            <b>Seperation of roles</b>
+            <p>
+                The provisioning engine can be hosted away from the SharePoint farm, this increases many factors, including performance and disaster recovery.
+                Allowing for faster spin ups after a disaster recovery action, or on initial provisioning.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Medium/High</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Low ~ High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li></li>
+</ul>
+
+

@@ -1,0 +1,69 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>XSLT</b>
+            <p>
+                XSLT is a language designed to transform structured data from one layout to another.
+                In SharePoint this is often used to change the way a WebPart displays information from a list or a search result.
+            </p>
+        </td>
+        <td>
+            <b>Client Side Rendering</b>
+            <p>
+                The way the field type is altered from a basic field type in the new model is through Client Side Rendering (CSR).
+                Including a JSLink file and adding it to the view allows the developer to modify the view in any way they desire.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>SharePoint 2013 has moved to Client Side Rendering</b>
+            <p>
+                XSLT should not be used from SharePoint 2013 onwards as it is replaced by JSLink in CSR.
+            </p>
+        </td>
+        <td>
+            <b>Client Side Rendering Benefits</b>
+            <p>
+                CSR moved processing from the server to the client further reducing server load when displaying a page, and making pages load faster in general.
+                For developers, JSLink came from the need to simplify the way client side rendering was done, in order to reduce complication.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Medium</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>Critical</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>XSLT should not be used anymore</li>
+    <li>JavaScript based technologies drive the App Model</li>
+</ul>
+
+

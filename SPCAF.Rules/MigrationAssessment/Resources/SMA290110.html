@@ -1,0 +1,80 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Custom Timer Jobs written in managed code</b>
+            <p>
+                Traditionally timer jobs have been written in managed code based upon <i>Microsoft.SharePoint.Administration.SPJobDefinition</i>. They can be controlled in central administration, and log to the Unified Logging Service/System Events tracker.
+                They are used to perform repeated operations, that would either be too much to process in one go, or that the data provided may come in small chunks every now and then. They are used over event receivers, to create less strain on the server.
+            </p>
+        </td>
+        <td>
+            <p>
+                While there is no direct implementation of a timer job in the App Model, there are multiple ways creating a timed job using the App Model.
+            </p>
+            <b>Azure Web Jobs</b>
+            <p>
+                An Azure Web Job, for all intents and purposes is a timer job, that is not attached directly to the SharePoint farm. While authentication is required, it is actually processing and method of process is the same as the old style SharePoint Timer Jobs.
+            </p>
+            <b>App as a Timer Job</b>
+            <p>
+                Recommended by many, and with samples in the Office PNP source codes samples, it is very easy to create an independent timer job in the App Model.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Performance Issues</b>
+            <p>
+                The SharePoint server can often have large amounts of data being processed by timer jobs at any one time. While the role of the SharePoint farm is to supply the data to users and to other applications, using the same resource to process the data can sometimes result in large performance deficits.
+            </p>
+        </td>
+        <td>
+            <b>Seperation of Roles</b>
+            <p>
+                The App Model enforces seperation of roles to a higher level, ensuring that custom components are seperate and cannot interfere with the running of the farm.
+            </p>
+            <b>Disaster recovery</b>
+            <p>
+                With less components deployed on the farm, disaster recovery plans become much simpler, and the turn around of activating a DR plan, is significantly reduced as the processing components of the farm, are separate.
+                The other benefit is having no deployed files to the server, which means that only the content database is backed up, ensuring a faster and more accurate disaster recovery process overall.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Medium/High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Performance</li>
+    <li>Disaster Recovery</li>
+    <li>Not Migratible Directly</li>
+</ul>
+
+

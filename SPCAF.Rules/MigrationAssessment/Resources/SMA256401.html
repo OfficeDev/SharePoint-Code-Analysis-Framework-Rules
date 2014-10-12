@@ -1,0 +1,68 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>User Profile Manager</b>
+            <p>
+                The Use Profile Manager (UPM) is used to allow you to edit user profiles and manage users at a farm level.
+            </p>
+        </td>
+        <td>
+            <b>SP.UserProfiles</b>
+            <p>User Profile Manager is replaced with SP.UserProfiles in the App Model and is accessible with the correct permissions.</p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>UPM User Rights</b>
+            <p>
+                Users require access to the UPM and in some cases it is done with elevated privileges, which is a security risk.
+            </p>
+        </td>
+        <td>
+            <b>Pre authorise permissions</b>
+            <p>
+                The correct approach is to only let users do what they have permissions to do.
+            </p>
+            <b>Comprehensive API</b>
+            <p>
+                The UserProfile API is comprehensive, covering all the required tasks that you may need when modifying or setting up users.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Medium</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Medium ~ High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>Medium</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Enforces security standards in development practices</li>
+    <li>Full migratable</li>
+</ul>
+
+

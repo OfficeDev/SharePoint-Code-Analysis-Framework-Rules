@@ -1,0 +1,76 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Acting on information as it is given, when it is given</b>
+            <p>
+                An event is a condition that has been met in a List/Web which then calls a code based solution (The Receiver) to perform some sort of action with this information.
+                They cover events created, adding, added, deleting, deleted, check in, check out, moving, updating, updated, broken and reset on various components in SharePoint.
+                They are deployed through a feature and attached to a List or Web object, and implement one of the events allowed for that type of object.
+                Typical usages include <i>Checking Validity of Data Entered, Making Additions to Data, Transforming Data</i>, or performing further tasks on this data.
+                This code will run on the SharePoint farm when the data is entered, either in the same action or in the background, depending on the type of action that was taken.
+            </p>
+        </td>
+        <td>
+            <b>Acting on the same information remotely</b>
+            <p>
+                Remote event receivers follow the same premise of their Full Trust counterparts.
+                They have mostly the same events (3 additional for Apps, and several unneeded ones removed).
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Performance Issues</b>
+            <p>
+                Due to the inline nature of some event receiver methods, even common practices like saving an item can increase load. If a list is accessed a lot in a company then this issue, which may not have been apparent in development quickly scales out, and slows other parts of the SharePoint server down.
+            </p>
+        </td>
+        <td>
+            <b>Seperation of Workflow</b>
+            <p>
+                The remote model of apps, takes the processing away from the farm, into a seperate dedicated resource. Queueing systems in place allow for simple and steady flows of data, while retaining security and governance.
+            </p>
+            <b>Increased Disaster Recovery Reliability</b>
+            <p>
+                If anything does go wrong on the SharePoint farm, the remote event receivers can be made to wait to reconnect, instead of the alternative, having them run locally, and losing the data which was being processed. This means that data loss chance is substantially reduced when using many Event Receivers in your Farm.
+                The other benefit of having no deployed files to the server, means that you are only backing up the content database, ensuring a faster and more accurate disaster recovery process overall.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Medium ~ High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Performance of Main Farm</li>
+    <li>Increased Disaster Recovery Reliability</li>
+</ul>
+
+

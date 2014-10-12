@@ -1,0 +1,82 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Deploy a managed code class which inherits from the HttpHandler interface iHttpHandler</b>
+            <p>
+                Traditionally in full trust applications, it was possible to create a handler which could direct HTTP requests in the programmed way.
+                Uses are often applications such as converting data from one format to another, or adding a custom api to join server side applications and the client side in a more transparent manner.
+            </p>
+        </td>
+        <td>
+            <b>Remote REST api</b>
+            <p>
+                Now we can add this extra functionality to keep processing server side, by using a remote api that uses the App Model for security.
+                This allows the program to be separate the process from the Client Side application, and keeps the processing offloaded.<br />
+                Typically, you would use this method if you need to serve files that are generated on the fly for different MIME types rather than the source data.
+            </p>
+
+            <b>Client Side JSOM</b>
+            <p>
+                As long as all the methods required are available in JSOM, then the processing can be done in the client.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Not Migratible</b>
+            <p>
+                The exact implementation of the HttpHandler interface is not migratible to the App Model.
+            </p>
+            <b>Server Performance Impact</b>
+            <p>
+                HttpHandlers can traditionally be a point of performance issues. Often they are used for processing large amounts of data, be it from multiple sources or from a large list/library. This means having such a component on the farm can, and often will, impact server performance.
+            </p>
+        </td>
+        <td>
+            <b>Server Performance</b>
+            <p>
+                This has added benefits of distributing the processing, heavily reducing the impact on the farm.
+            </p>
+            <b>Disaster recovery</b>
+            <p>
+                With less components deployed on the farm, disaster recovery plans become much simpler, and the turn around of activating a DR plan is significantly reduced as the processing components of the farm are separate.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Critical</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Performance</li>
+    <li>Disaster Recovery</li>
+</ul>
+
+

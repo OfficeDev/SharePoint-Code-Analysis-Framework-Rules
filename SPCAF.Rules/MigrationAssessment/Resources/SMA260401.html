@@ -1,0 +1,74 @@
+﻿<!-- items in <b> tags are headings above all paragraphs -->
+<table>
+    <tr>
+        <th><strong>Full Trust Approach</strong></th>
+        <th><strong>App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Template File</b>
+            <p>
+                <i>TemplateFile</i> is a file referenced in the package manifest <b>manifest.xml</b>.
+                These are files to be deployed to the SharePoint Environment.
+                Ideally these files should be deployed using a <i>Module</i> which will allow for controlled deployment through features.
+                The module tells SharePoint how and where to store the files.
+            </p>
+        </td>
+        <td>
+            <b>Module deployment through the App Model</b>
+            <p>
+                The App Model in this instance is built for remote provisioning of files and resources.
+                You can upload files using CSOM to any existing library that you have access too.
+                The App Model describes file locations through code, as opposed to the module which describes file locations declaratively through XML.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th><strong>Impact of Full Trust Approach</strong></th>
+        <th><strong>Benefit of App Approach</strong></th>
+    </tr>
+    <tr>
+        <td>
+            <b>Code Based Retraction</b>
+            <p>
+                In order to retract a module solution from a SharePoint farm, we need at least SandBox code to be available.
+                This breaks away from the no Farm solution deployment model of the App Remote Provisioning Model, which increases Disaster Recovery Risk and reduces migratability.
+            </p>
+        </td>
+        <td>
+            <b>Increased Disaster Recovery Reliability</b>
+            <p>
+                If anything does go wrong on the SharePoint farm, the remote event receivers can be made to wait to reconnect, instead of the alternative, having them run locally, and losing the data which was being processed.
+                This means that the chance of lost data is substantially reduced when using many Event Receivers in your Farm.
+                The other benefit of having no deployed files to the server means that you are only backing up the content database, ensuring a faster and more accurate disaster recovery process overall.
+            </p>
+        </td>
+    </tr>
+</table>
+<p><strong>Efforts and Benefits</strong></p>
+<table>
+    <tr>
+        <td>Migration Impact</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Re-Design Effort</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Re-Development Effort</td>
+        <td>Medium</td>
+    </tr>
+    <tr>
+        <td>Long Term Benefit</td>
+        <td>High</td>
+    </tr>
+</table>
+<p><strong>Effort Drivers</strong></p>
+<ul>
+    <!-- Unordered list of reasons to exert resource -->
+    <li>Increases Disaster Recovery Speed</li>
+    <li>Reducing Future Work in Migration Plans</li>
+</ul>
+
+
