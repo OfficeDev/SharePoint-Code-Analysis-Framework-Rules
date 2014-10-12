@@ -1,4 +1,4 @@
-Custom Rules for the SharePoint Code Analysis Framework (SPCAF)
+Rules for the SharePoint Code Analysis Framework (SPCAF)
 ===============================================================
 
 Summary
