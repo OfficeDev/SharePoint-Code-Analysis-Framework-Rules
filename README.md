@@ -5,7 +5,21 @@ Summary
 -------
 This project contains custom community rules that can be used with the [SharePoint Code Analysis Framework (SPCAF)](http://www.spcaf.com). 
 
+The rules are supported by the 
+
+- [SPCAF Code Migration Assessment (Free)](http://url.spcaf.com/spcafma) and the 
+- [SPCAF Professional Edition (Commercial)](http://url.spcaf.com/spcafpro)
+
 The purpose of this project is to align the coding practices checked by SPCAF with the guidance defined by Microsoft e.g. in the [Office Patterns and Practices](https://github.com/OfficeDev/PnP) project in order to support developers with the transformation of their legacy full trust farm solutions (.wsp) to the SharePoint App model.
+
+How do I get started?
+---------------------
+
+1. Download and install the free [SPCAF Code Migration Assessment](http://url.spcaf.com/spcafma) tool or [SPCAF Professional Edition](http://url.spcaf.com/spcafpro)
+2. Clone this GitHub Repositiory and open the Visual Studio solution inside the SPCAF.Rules folder
+3. Create/Change a rule
+4. Build and replace the SPCAF.Rules.MigrationAssessment.dll in the SPCAF installation folder
+5. Run SPCAF and test your rule on a WSP file.
                                      
 What is SPCAF?
 --------------
@@ -28,8 +42,8 @@ Links
 **Download (Visual Studio Gallery)**
 
 - [SPCAF Code Migration Assessment (Free)](http://url.spcaf.com/spcafma) 
-- [SPCop Community Edition (Free)](http://url.spcaf.com/spcopce)
-- [SPCAF Professional (Premium)](http://url.spcaf.com/spcafpro)
+- [SPCAF Community Edition (Free)](http://url.spcaf.com/spcopce)
+- [SPCAF Professional Edition (Commercial)](http://url.spcaf.com/spcafpro)
 
 **Documentation**
 
