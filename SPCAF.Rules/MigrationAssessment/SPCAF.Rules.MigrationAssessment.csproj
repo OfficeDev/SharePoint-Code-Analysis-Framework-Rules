@@ -38,10 +38,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Cecil">
-      <HintPath>C:\Program Files (x86)\SPCAF\Mono.Cecil.dll</HintPath>
+      <HintPath Condition="Exists('C:\Program Files (x86)\SPCAF')">C:\Program Files (x86)\SPCAF\Mono.Cecil.dll</HintPath>
+      <HintPath Condition="Exists('C:\Program Files (x86)\SPCAFMigrationAssessment')">C:\Program Files (x86)\SPCAFMigrationAssessment\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="SPCAF.Sdk">
-      <HintPath>C:\Program Files (x86)\SPCAF\SPCAF.Sdk.dll</HintPath>
+     <HintPath Condition="Exists('C:\Program Files (x86)\SPCAF')">C:\Program Files (x86)\SPCAF\Mono.Sdk.dll</HintPath>
+     <HintPath Condition="Exists('C:\Program Files (x86)\SPCAFMigrationAssessment')">C:\Program Files (x86)\SPCAFMigrationAssessment\Mono.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
