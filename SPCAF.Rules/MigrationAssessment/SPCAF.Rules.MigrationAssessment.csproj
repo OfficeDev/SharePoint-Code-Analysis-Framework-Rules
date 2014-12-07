@@ -125,7 +125,6 @@
     <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256402_WebPartWithSearch.Resolution.html">
       <DependentUpon>SMA256402_WebPartWithSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Resources\blankResolutionResourceTemplate.html" />
     <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2621_Feature\SMA262101_Feature.Resolution.html">
       <DependentUpon>SMA262101_Feature.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,7 +133,6 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Resources\Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
