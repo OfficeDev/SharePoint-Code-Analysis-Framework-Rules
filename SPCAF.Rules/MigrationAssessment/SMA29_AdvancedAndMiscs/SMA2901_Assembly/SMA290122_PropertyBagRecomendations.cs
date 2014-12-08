@@ -13,7 +13,7 @@ namespace SPCAF.Rules.MigrationAssessment
         DefaultSeverity = Severity.CriticalWarning,
         SharePointVersion = new string[] { "12", "14", "15" },
         Message = "Property Bag Access '{0}' in Assembly '{1}' should be changed to use CSOM, in the App Model.")]
-    public class PropertyBagRecomendation : Rule<AssemblyFileReferenceWSP>
+    public class PropertyBagRecomendations : Rule<AssemblyFileReferenceWSP>
     {
         public override void Visit(AssemblyFileReferenceWSP target, NotificationCollection notifications)
         {

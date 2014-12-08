@@ -76,61 +76,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SMA25_Customization\SMA2564_Webpart\SMA256401_WebPartUserProfileManager.cs" />
-    <Compile Include="SMA25_Customization\SMA2564_Webpart\SMA256402_WebPartWithSearch.cs" />
+    <Compile Include="SMA25_Customization\SMA2564_Webpart\SMA256401_WebPartUserProfilesManager.cs" />
+    <Compile Include="SMA25_Customization\SMA2564_Webpart\SMA256402_WebPartsThatImplementSearch.cs" />
     <Compile Include="SMA25_Customization\SMA2564_Webpart\SMA256403_WebPartWithXsltTransform.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2621_Feature\SMA262101_Feature.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2656_ContentTypeBinding\SMA265601_ContentTypeBinding.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2655_ListDefinition\SMA265501_ListDefinition.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2654_ListInstance\SMA265401_ListInstance.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2651_Field\SMA265101_Field.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2652_ContentType\SMA265201_ContentType.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2670_FeatureStapling\SMA267001_FeatureStapling.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2677_WebTemplate\SMA267701_WebTemplate.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2678_SiteDefinition\SMA267801_SiteDefinition.cs" />
-    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2604_TemplateFile\SMA260401_LayoutFiles.cs" />
-    <Compile Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286003_WebEventReceiver.cs" />
-    <Compile Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286002_ListEventReceiver.cs" />
-    <Compile Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286001_ItemEventReceiver.cs" />
-    <Compile Include="SMA28_ProcessIntegration\SMA2858_CustomActionGroup\SMA285801_CustomActionGroup.cs" />
-    <Compile Include="SMA28_ProcessIntegration\SMA2859_HideCustomAction\SMA285901_HideCustomAction.cs" />
-    <Compile Include="SMA28_ProcessIntegration\SMA2857_CustomAction\SMA285701_CustomAction.cs" />
-    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290122_PropertyBag.cs" />
-    <Compile Include="SMA29_AdvancedAndMiscs\SMA2922_FieldType\SMA292202_FieldTypes.cs" />
-    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290121_HttpHandler.cs" />
-    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290120_HttpModule.cs" />
-    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290110_TimerJobs.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2621_Feature\SMA262101_FeatureRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2656_ContentTypeBinding\SMA265601_ContentTypeBindingRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2655_ListDefinition\SMA265501_ListDefinitionRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2654_ListInstance\SMA265401_ListInstanceRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2651_Field\SMA265101_FieldRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2652_ContentType\SMA265201_ContentTypeRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2670_FeatureStapling\SMA267001_FeatureStaplingRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2677_WebTemplate\SMA267701_WebTemplateRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2678_SiteDefinition\SMA267801_SiteDefinitionRecommendations.cs" />
+    <Compile Include="SMA26_DeploymentAndProvisioning\SMA2604_TemplateFile\SMA260401_LayoutFilesRecommendations.cs" />
+    <Compile Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286003_WebEventReceiverRecommendations.cs" />
+    <Compile Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286002_ListEventReceiverRecommendations.cs" />
+    <Compile Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286001_ItemEventReceiverRecommendations.cs" />
+    <Compile Include="SMA28_ProcessIntegration\SMA2858_CustomActionGroup\SMA285801_CustomActionGroupRecommendations.cs" />
+    <Compile Include="SMA28_ProcessIntegration\SMA2859_HideCustomAction\SMA285901_HideCustomActionRecommendations.cs" />
+    <Compile Include="SMA28_ProcessIntegration\SMA2857_CustomAction\SMA285701_CustomActionRecommendations.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290122_PropertyBagRecomendations.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\SMA2922_FieldType\SMA292202_FieldTypeRecommendations.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290121_HttpHandlerRecommendations.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290120_HttpModuleRecommendations.cs" />
+    <Compile Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290110_TimerJobRecommendations.cs" />
     <Compile Include="Categories.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SMA26_DeploymentAndProvisioning\01_Assembly\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="SMA27_UIAndBranding\SMABranding.html" />
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2677_WebTemplate\SMA267701_WebTemplate.Resolution.html">
-      <DependentUpon>SMA267701_WebTemplate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2858_CustomActionGroup\SMA285801_CustomActionGroup.Resolution.html">
-      <DependentUpon>SMA285801_CustomActionGroup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2859_HideCustomAction\SMA285901_HideCustomAction.Resolution.html">
-      <DependentUpon>SMA285901_HideCustomAction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256401_WebPartUserProfileManager.Resolution.html">
-      <DependentUpon>SMA256401_WebPartUserProfileManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256403_WebPartWithXsltTransform.Resolution.html">
-      <DependentUpon>SMA256403_WebPartWithXsltTransform.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256402_WebPartWithSearch.Resolution.html">
-      <DependentUpon>SMA256402_WebPartWithSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2621_Feature\SMA262101_Feature.Resolution.html">
-      <DependentUpon>SMA262101_Feature.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290122_PropertyBag.Resolution.html">
-      <DependentUpon>SMA290122_PropertyBag.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2677_WebTemplate\SMA267701_WebTemplateRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2858_CustomActionGroup\SMA285801_CustomActionGroupRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2859_HideCustomAction\SMA285901_HideCustomActionRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256401_WebPartUserProfilesManager.Resolution.html" />
+    <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256403_WebPartWithXsltTransform.Resolution.html" />
+    <EmbeddedResource Include="SMA25_Customization\SMA2564_Webpart\SMA256402_WebPartsThatImplementSearch.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2621_Feature\SMA262101_FeatureRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290122_PropertyBagRecomendations.Resolution.html" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -138,54 +120,22 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2604_TemplateFile\SMA260401_LayoutFiles.Resolution.html">
-      <DependentUpon>SMA260401_LayoutFiles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2651_Field\SMA265101_Field.Resolution.html">
-      <DependentUpon>SMA265101_Field.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2652_ContentType\SMA265201_ContentType.Resolution.html">
-      <DependentUpon>SMA265201_ContentType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2654_ListInstance\SMA265401_ListInstance.Resolution.html">
-      <DependentUpon>SMA265401_ListInstance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2655_ListDefinition\SMA265501_ListDefinition.Resolution.html">
-      <DependentUpon>SMA265501_ListDefinition.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2670_FeatureStapling\SMA267001_FeatureStapling.Resolution.html">
-      <DependentUpon>SMA267001_FeatureStapling.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2678_SiteDefinition\SMA267801_SiteDefinition.Resolution.html">
-      <DependentUpon>SMA267801_SiteDefinition.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2857_CustomAction\SMA285701_CustomAction.Resolution.html">
-      <DependentUpon>SMA285701_CustomAction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286001_ItemEventReceiver.Resolution.html">
-      <DependentUpon>SMA286001_ItemEventReceiver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286002_ListEventReceiver.Resolution.html">
-      <DependentUpon>SMA286002_ListEventReceiver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286003_WebEventReceiver.Resolution.html">
-      <DependentUpon>SMA286003_WebEventReceiver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290110_TimerJobs.Resolution.html">
-      <DependentUpon>SMA290110_TimerJobs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290120_HttpModule.Resolution.html">
-      <DependentUpon>SMA290120_HttpModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290121_HttpHandler.Resolution.html">
-      <DependentUpon>SMA290121_HttpHandler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2922_FieldType\SMA292202_FieldTypes.Resolution.html">
-      <DependentUpon>SMA292202_FieldTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2656_ContentTypeBinding\SMA265601_ContentTypeBinding.Resolution.html">
-      <DependentUpon>SMA265601_ContentTypeBinding.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2604_TemplateFile\SMA260401_LayoutFilesRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2651_Field\SMA265101_FieldRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2652_ContentType\SMA265201_ContentTypeRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2654_ListInstance\SMA265401_ListInstanceRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2655_ListDefinition\SMA265501_ListDefinitionRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2670_FeatureStapling\SMA267001_FeatureStaplingRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2678_SiteDefinition\SMA267801_SiteDefinitionRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2857_CustomAction\SMA285701_CustomActionRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286001_ItemEventReceiverRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286002_ListEventReceiverRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA28_ProcessIntegration\SMA2860_Receiver\SMA286003_WebEventReceiverRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290110_TimerJobRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290120_HttpModuleRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2901_Assembly\SMA290121_HttpHandlerRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA29_AdvancedAndMiscs\SMA2922_FieldType\SMA292202_FieldTypeRecommendations.Resolution.html" />
+    <EmbeddedResource Include="SMA26_DeploymentAndProvisioning\SMA2656_ContentTypeBinding\SMA265601_ContentTypeBindingRecommendations.Resolution.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

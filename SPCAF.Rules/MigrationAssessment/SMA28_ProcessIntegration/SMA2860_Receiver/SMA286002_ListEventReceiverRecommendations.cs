@@ -20,7 +20,7 @@ namespace SPCAF.Rules.MigrationAssessment
             "OfficeDev PnP: See sample Core.EventReceivers",
             "https://github.com/OfficeDev/PnP/tree/master/Samples/Core.EventReceivers"            
         })]
-    public class ListEventReceiver : Rule<ReceiverDefinition>
+    public class ListEventReceiverRecommendations : Rule<ReceiverDefinition>
     {
         public override void Visit(ReceiverDefinition target, NotificationCollection notifications)
         {

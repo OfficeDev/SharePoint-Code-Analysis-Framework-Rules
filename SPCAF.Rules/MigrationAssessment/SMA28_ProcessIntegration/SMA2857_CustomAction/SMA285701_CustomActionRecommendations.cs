@@ -21,7 +21,7 @@ namespace SPCAF.Rules.MigrationAssessment
             "Apps for SharePoint compared with SharePoint solutions - Doing things the App way",
             "http://msdn.microsoft.com/en-us/library/office/jj163114%28v=office.15%29.aspx#Questions"
         })]
-    public class CustomAction : Rule<CustomActionDefinition>
+    public class CustomActionRecommendations : Rule<CustomActionDefinition>
     {
         public override void Visit(CustomActionDefinition target, NotificationCollection notifications)
         {
