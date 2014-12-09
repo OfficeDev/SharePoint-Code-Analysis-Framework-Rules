@@ -19,7 +19,7 @@ How do I get started?
 2. Clone this GitHub Repositiory and open the Visual Studio solution inside the SPCAF.Rules folder
 3. Create/Change a rule
 4. Build and replace the SPCAF.Rules.MigrationAssessment.dll in the SPCAF installation folder
-5. Run SPCAF and test your rule on a WSP file.
+5. Run SPCAF test your rule on a WSP file (in SPCAF Professional you have to select the Migration Assessment ruleset in the advanced view before the analysis)
                                      
 What is SPCAF?
 --------------
