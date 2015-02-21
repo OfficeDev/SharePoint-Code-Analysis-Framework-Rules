@@ -50,7 +50,7 @@ Links
 - [Online Documentation](http://docs.spcaf.com)
 - [Run SPCAF in VS](http://url.spcaf.com/vsintegration)
 - [Rule Development (SDK)](http://url.spcaf.com/sdk)
-- [Sample Rule](http://url.spcaf.com/admin/)
+- [Sample Rule](http://url.spcaf.com/samplerule)
 
 **Other**
 
