@@ -16,7 +16,7 @@ How do I get started?
 ---------------------
 
 1. Download and install the free [SPCAF Code Migration Assessment](http://url.spcaf.com/spcafma) tool or [SPCAF Professional Edition](http://url.spcaf.com/spcafpro)
-2. Clone this GitHub Repositiory and open the Visual Studio solution inside the SPCAF.Rules folder
+2. Clone this GitHub repositiory and open the Visual Studio solution inside the SPCAF.Rules folder
 3. Create/Change a rule
 4. Build and replace the SPCAF.Rules.MigrationAssessment.dll in the SPCAF installation folder
 5. Run SPCAF test your rule on a WSP file (in SPCAF Professional you have to select the Migration Assessment ruleset in the advanced view before the analysis)
@@ -34,7 +34,7 @@ SPCAF includes five different analysis components for
 * Inventory and 
 * Code Migration Assessment.
  
-SPCAF runs integrated in Visual Studio 2010, 2012 and 2013 or in the standalone client application that can analyze without having the source code.
+SPCAF runs integrated in Visual Studio 2010, 2012, 2013 and 2015 or in the standalone client application that can analyze without having the source code.
 Further, with SPCAF Server you can integrate the code analysis into your continuous integration process in Team Foundation Server, Visual Studio Online, TeamCity or any other automated build system. 
 
 Links
