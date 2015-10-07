@@ -12,7 +12,7 @@ The rules are supported by the
 
 The purpose of this project is to align the coding practices checked by SPCAF with the guidance defined by Microsoft e.g. in the [Office Patterns and Practices](https://github.com/OfficeDev/PnP) project in order to support developers with the transformation of their legacy full trust farm solutions (.wsp) to the SharePoint App model.
 
-How do I get started?
+How do I get started? 
 ---------------------
 
 1. Download and install the free [SPCAF Code Migration Assessment](http://url.spcaf.com/spcafma) tool or [SPCAF Professional Edition](http://url.spcaf.com/spcafpro)
