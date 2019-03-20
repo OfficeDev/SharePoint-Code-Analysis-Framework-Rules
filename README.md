@@ -1,3 +1,14 @@
+---
+topic: sample
+products:
+- SharePoint
+- Office 365
+languages:
+- HTML
+extensions:
+  contentType: tools
+  createdDate: 10/1/2014 2:08:12 PM
+---
 Rules for the SharePoint Code Analysis Framework (SPCAF)
 ===============================================================
 
