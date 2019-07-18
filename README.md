@@ -1,10 +1,10 @@
 ---
 topic: sample
 products:
-- SharePoint
-- Office 365
+- office-sp
+- office-365
 languages:
-- HTML
+- html
 extensions:
   contentType: tools
   createdDate: 10/1/2014 2:08:12 PM
